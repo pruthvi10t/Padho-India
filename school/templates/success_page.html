@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FF9633;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+</style>
+<title>Success</title>
+</head>
+<body>
+<ul>
+  <li><a href="#home">HOME</a></li>
+  <li><a class = "active" href="{% url 'donor_home_page' %}">DONOR</a></li>
+  <li><a href="{% url 'school_home_page' %}">SCHOOL</a></li>
+  <li><a href="#about">ABOUT</a></li>
+</ul>
+
+<h1>Successfully registered</h1>
+<h1>{{school.school_name}}</h1>
+<h1>{{location.longitude}} {{location.latitude}}</h1>
+</body>
+</html>
